@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>STAFF LOGIN </title>
+</head>
+<body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        place-items: center;
+        background: #f2f2f2;
+        /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+    }
+
+    ::selection {
+        background: #4158d0;
+        color: #fff;
+    }
+
+    .wrapper {
+        width: 380px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .title {
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+        user-select: none;
+        border-radius: 15px 15px 0 0;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+    }
+
+    .wrapper form {
+        padding: 10px 30px 50px 30px;
+    }
+
+    .wrapper form .field {
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .wrapper form .field input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        font-size: 17px;
+        padding-left: 20px;
+        border: 1px solid lightgrey;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .wrapper form .field input:focus,
+    form .field input:valid {
+        border-color: #4158d0;
+    }
+
+    .wrapper form .field label {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        color: #999999;
+        font-weight: 400;
+        font-size: 17px;
+        pointer-events: none;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+    }
+
+    form .field input:focus ~ label,
+    form .field input:valid ~ label {
+        top: 0%;
+        font-size: 16px;
+        color: #4158d0;
+        background: #fff;
+        transform: translateY(-50%);
+    }
+
+    form .content {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    form .content .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form .content input {
+        width: 15px;
+        height: 15px;
+        background: red;
+    }
+
+    form .content label {
+        color: #262626;
+        user-select: none;
+        padding-left: 5px;
+    }
+
+    form .content .pass-link {
+        color: "";
+    }
+
+    form .field input[type="submit"] {
+        color: #fff;
+        border: none;
+        padding-left: 0;
+        margin-top: -10px;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        transition: all 0.3s ease;
+    }
+
+    form .field input[type="submit"]:active {
+        transform: scale(0.95);
+    }
+
+    form .signup-link {
+        color: #262626;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    form .pass-link a,
+    form .signup-link a {
+        color: #4158d0;
+        text-decoration: none;
+    }
+
+    form .pass-link a:hover,
+    form .signup-link a:hover {
+        text-decoration: underline;
+    }
+    form .home-link a{
+        color: red;
+        text-decoration: none;
+        position: absolute;
+        right: 550px;
+
+    }
+    form .home-link {
+        text-align: center;
+        text-decoration: none;
+    }
+    h1 {
+        text-align: center;
+        color: brown;
+        font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif
+
+    }
+
+    h5 {
+        text-align: center;
+        color: red;
+    }
+</style>
+
+<h1>WELCOME TO STAFF LOGIN PAGE</h1>
+<div class="wrapper">
+    <div class="title">
+        Login Form
+    </div>
+    <form action="/staffuser" method="post">
+        <div class="field">
+            <input type="email" name="username" required>
+            <label>Email Address</label>
+        </div>
+        <div class="field">
+            <input type="password" name="password" required>
+            <label>Password</label>
+        </div>
+        <div class="content">
+            <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="pass-link">
+                <a href="/forget">Forgot password?</a></div>
+        </div>
+        <div class="field">
+            <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">
+            Not a member? <a href="/staffsignup">Signup now</a></div>
+        <br>
+        <div class="home-link">
+             <a href="/n"> Go to Home HOME PAGE</a>
+        </div>
+
+
+
+        {% if message %}
+            <h5>
+                {{ message.error }}
+
+            </h5>
+        {% endif %}
+    </form>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

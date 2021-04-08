@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Main page</title>
+    <style>
+        body {
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            margin: 2px;
+            font-size: 30px;
+            font-family: "Arial Black";
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            text-align: center;
+            list-style-type: none;
+            list-style-position: inside;
+            font-size: 20px;
+            display: inline;
+        }
+
+        li {
+            display: inline;
+            padding: 20px;
+        }
+
+        a {
+            display: inline;
+
+        }
+
+        h1 {
+            background-color: purple;
+            color: white;
+        }
+
+        .new {
+            position: absolute;
+            left: 400px;
+            top: 470px;
+            color: purple;
+            background-color: white;
+            margin: -390px;
+            font-size: 20px;
+        }
+
+        p {
+            text-align: right;
+            font-size: 15px;
+
+        }
+
+        .btn {
+            background-color: white;
+            color: blue;
+            position: absolute;
+            font-size: 20px;
+            margin: 1px;
+
+
+        .modal-title {
+            background-color: white;
+            color: blue;
+
+            font-size: 20px;
+
+
+        }
+        .log{
+
+        color: red;
+            position: absolute;
+            right: 10px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<h1>Welcome to RSS School</h1>
+
+
+<div class="header">
+    <ul>
+        <li><a href="" target="_blank">Home</a></li>
+        <li><a href="{{ url_for('index') }}"> Student Details </a></li>
+
+        <li><a href="{{ url_for('stafflogin') }}">Staff Login</a></li>
+        <li class="log"> <a href="{{ url_for('login') }}">Logout</a> </li>
+
+
+
+
+
+
+    </ul>
+    <img src="{{ url_for('static', filename='images/scholl.jpg') }}">
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+BareNecessities==0.2.8
+blinker==1.4
+click==7.1.2
+Flask==1.1.2
+Flask-Mail==0.9.1
+Flask-MySQLdb==0.2.0
+gunicorn==20.1.0
+itsdangerous==1.1.0
+Jinja2==2.11.3
+Mail==2.1.0
+MarkupSafe==1.1.1
+mysqlclient==2.0.3
+procfile==0.1.0
+touch==2020.12.3
+values==2020.12.3
+Werkzeug==1.0.1
